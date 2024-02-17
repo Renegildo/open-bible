@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(assets/fonts/LoyalBoldv1.otf);
+
+body {
+	@apply bg-[#0A0908];
+}
+
+.serif {
+	font-family: "LoyalBoldv1", Times, serif;
+}

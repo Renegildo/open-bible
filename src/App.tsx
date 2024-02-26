@@ -1,12 +1,15 @@
+import { useState } from "react";
 import Bible from "./components/Bible";
 import Header from "./components/Header";
 
 const App = () => {
+	const [currentBook, setCurrentBook] = useState("gn");
+
 	return (
 		<div>
-			<Header />
+			<Header setCurrentBook={setCurrentBook} />
 			<div className="h-[10vh]" />
-			<Bible />
+			<Bible currentBook={currentBook} />
 		</div>
 	);
 }

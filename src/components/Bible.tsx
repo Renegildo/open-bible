@@ -1,11 +1,15 @@
 import bibleData from '../bibleData.json';
 
-const Bible = () => {
+interface BibleProps {
+	currentBook: string;
+}
+
+const Bible = ({ currentBook }: BibleProps) => {
 	return (
 		<main className='text-[#fff] overflow-scroll h-[90vh]'>
 			{
 				bibleData.map(book => (
-					<div>
+					(book.abbrev === currentBook) && <div>
 						<h1 className='font-black text-4xl serif text-center bg-[#22333B] py-3 mb-10 tracking-wider shadow-lg' key={book.name} id={book.name}>{book.name}</h1>
 						{book.chapters.map((chapters, chapterIndex) => (
 							<div className='mx-5 mb-10'>
